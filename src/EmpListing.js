@@ -100,7 +100,7 @@ const EmpListing = () => {
                                         <td>{item.firstName}</td>
                                         <td>{item.lastName}</td>
                                         <td>{item.designationName}</td>
-                                        <td>{item.isActive ? "true" : "false"}</td>
+                                        <td>{item.isActive ? <input type="checkbox" checked={true}/> : <input type="checkbox" checked={false}/> }</td>
                                         <td><Link to={"employee/edit/" + item.bpartnerId} className="btn btn-success">Edit</Link>
                                             <Link onClick={() => { Deactivatefunction(item.bpartnerId) }} className="btn btn-danger">Deactivate</Link>
                                         </td>
