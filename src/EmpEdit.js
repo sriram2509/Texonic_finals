@@ -356,6 +356,15 @@ const EmpEdit = () => {
         // })
 
     }
+    let timestamp = Number(dateOfBirth.toString().split());
+    const date = new Date(timestamp);
+    console.log(date)
+    const dateValues = [
+        date.getFullYear(),
+        date.getMonth()+1,
+        date.getDate()
+    ];
+    console.log(dateValues)
     return (
         <div>
 
@@ -474,7 +483,7 @@ const EmpEdit = () => {
                                             <label>Date of Birth <sup style={{color: "red"}}>*</sup></label>
                                             <input
                                                 id="id_input_fm_1_date_of_birth"
-                                                value={dateOfBirth}
+                                                value={dateValues[0] + '-' + dateValues[1] +  '-' +  dateValues[2]}
                                                 type="date"
                                                 onChange={(e) => dateofbirthchange(e.target.value)}
                                                 className="form-control"
