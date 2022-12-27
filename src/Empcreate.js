@@ -595,13 +595,10 @@ const EmpCreate = () => {
                       <input
                         id="id_input_fm_1_contact_number"
                         value={contactNumber}
-                        type="tel"
-                        inputmode="numeric"
+                        type="number"
                         placeholder="xxx-xxx-xxxx"
-                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                        size="10"
-                        // minlength="9"
-                        // maxlength="14"
+                        minLength="10"
+                        maxLength="10"
                         onChange={(e) => contactnumberchange(e.target.value)}
                         className="form-control"
                       />
